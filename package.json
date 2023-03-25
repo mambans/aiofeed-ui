@@ -1,0 +1,67 @@
+{
+	"name": "aiofeed-ui",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"preview": "vite preview",
+		"storybook": "start-storybook -p 6006",
+		"build-storybook": "build-storybook"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"author": "Mambans",
+	"repository": "https://github.com/mambans/aiofeed-ui",
+	"bugs": {
+		"url": "https://github.com/mambans/aiofeed-ui/issues"
+	},
+	"main": "index.js",
+	"module": "index.es.js",
+	"jsnext:main": "index.es.js",
+	"keywords": [
+		"aiofeed",
+		"ui",
+		"react",
+		"components",
+		"component library"
+	],
+	"dependencies": {
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-icons": "^4.8.0",
+		"styled-components": "^5.3.9"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.21.3",
+		"@storybook/addon-actions": "^6.5.16",
+		"@storybook/addon-essentials": "^6.4.22",
+		"@storybook/addon-interactions": "^6.5.16",
+		"@storybook/addon-links": "^6.5.16",
+		"@storybook/builder-vite": "^0.1.37",
+		"@storybook/react": "^6.1.21",
+		"@storybook/testing-library": "^0.0.13",
+		"@types/js-cookie": "^3.0.3",
+		"@types/node": "^18.15.3",
+		"@types/react": "^18.0.28",
+		"@types/react-dom": "^18.0.11",
+		"@types/styled-components": "^5.1.26",
+		"@typescript-eslint/eslint-plugin": "^5.55.0",
+		"@typescript-eslint/parser": "^5.55.0",
+		"@vitejs/plugin-react-swc": "^3.0.0",
+		"babel-loader": "^8.3.0",
+		"eslint": "^8.36.0",
+		"eslint-config-prettier": "^8.7.0",
+		"eslint-config-react-app": "^7.0.1",
+		"eslint-import-resolver-typescript": "^3.5.3",
+		"eslint-plugin-import": "^2.27.5",
+		"eslint-plugin-jsx-a11y": "^6.7.1",
+		"eslint-plugin-react": "^7.32.2",
+		"path": "^0.12.7",
+		"typescript": "^4.9.3",
+		"vite": "^4.2.0",
+		"vite-plugin-eslint": "^1.8.1"
+	}
+}

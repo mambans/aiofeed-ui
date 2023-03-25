@@ -1,0 +1,3 @@
+interface utilitiesType {
+	rgba: function;
+}
