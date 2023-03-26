@@ -1,14 +1,11 @@
 {
 	"name": "aiofeed-ui",
-	"private": true,
-	"version": "0.0.0",
+	"version": "0.1.2",
 	"type": "module",
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc && vite build",
-		"preview": "vite preview",
-		"storybook": "start-storybook -p 6006",
-		"build-storybook": "build-storybook"
+		"preview": "vite preview"
 	},
 	"publishConfig": {
 		"access": "public"
@@ -18,9 +15,17 @@
 	"bugs": {
 		"url": "https://github.com/mambans/aiofeed-ui/issues"
 	},
-	"main": "index.js",
-	"module": "index.es.js",
-	"jsnext:main": "index.es.js",
+	"exports": {
+		".": {
+			"import": "./dist/index.es.js",
+			"require": "./dist/index.cjs.js",
+			"types": "./dist/index.d.ts"
+		}
+	},
+	"main": "./dist/index.cjs.js",
+	"module": "./dist/index.es.js",
+	"jsnext:main": "./dist/index.es.js",
+	"types": "./dist/index.d.ts",
 	"keywords": [
 		"aiofeed",
 		"ui",
@@ -36,13 +41,7 @@
 	},
 	"devDependencies": {
 		"@babel/core": "^7.21.3",
-		"@storybook/addon-actions": "^6.5.16",
-		"@storybook/addon-essentials": "^6.4.22",
-		"@storybook/addon-interactions": "^6.5.16",
-		"@storybook/addon-links": "^6.5.16",
-		"@storybook/builder-vite": "^0.1.37",
-		"@storybook/react": "^6.1.21",
-		"@storybook/testing-library": "^0.0.13",
+		"@rollup/plugin-typescript": "^11.0.0",
 		"@types/js-cookie": "^3.0.3",
 		"@types/node": "^18.15.3",
 		"@types/react": "^18.0.28",
@@ -60,8 +59,13 @@
 		"eslint-plugin-jsx-a11y": "^6.7.1",
 		"eslint-plugin-react": "^7.32.2",
 		"path": "^0.12.7",
+		"rollup-plugin-typescript-paths": "^1.4.0",
 		"typescript": "^4.9.3",
 		"vite": "^4.2.0",
 		"vite-plugin-eslint": "^1.8.1"
-	}
+	},
+	"files": [
+		"dist",
+		"package.json"
+	]
 }

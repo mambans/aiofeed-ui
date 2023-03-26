@@ -10,18 +10,25 @@
 		"strict": true,
 		"forceConsistentCasingInFileNames": true,
 		"module": "ESNext",
-		"moduleResolution": "Node",
+		"moduleResolution": "node",
 		"resolveJsonModule": true,
 		"isolatedModules": true,
-		"noEmit": true,
+		// "noEmit": true,
 		"jsx": "react-jsx",
-		"baseUrl": ".",
+		"declaration": true,
+		"emitDeclarationOnly": true,
+		// "declarationDir": "types",
+		"sourceMap": true,
+		"outDir": "dist",
+		"baseUrl": "./",
 		"types": ["node"],
 		"paths": {
 			// "@/*": ["./src/*", "./dist/*", ""]
-			"@/*": ["./src/*"]
+			"@/*": ["./src/*"],
+			"~/*": ["src/*"]
 		}
 	},
 	"include": ["src"],
+	"exclude": ["node_modules"],
 	"references": [{ "path": "./tsconfig.node.json" }]
 }
